@@ -1,11 +1,10 @@
 <?php
 
-const DOTENV_PATH = __DIR__ . '/../.env';
 const DOTENV_FILE = '.env';
 const DOTENV_OVERLOAD = false;
 
 $params = require __DIR__ . '/params.php';
-$db = require __DIR__ . '/db.php';
+$routes = require __DIR__ . '/routes.php';
 
 $config = [
     'id' => 'basic',
@@ -22,10 +21,6 @@ $config = [
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
-        ],
-        'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -45,14 +40,10 @@ $config = [
                 ],
             ],
         ],
-        'db' => $db,
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-                'posts' => 'post/index',
-                'post/<id:\d+>' => 'post/view',
-            ]
+            'rules' => $routes,
         ],
     ],
     'params' => $params,
