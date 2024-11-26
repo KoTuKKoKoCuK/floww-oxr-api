@@ -3,7 +3,6 @@
 const DOTENV_FILE = '.env';
 const DOTENV_OVERLOAD = false;
 
-$params = require __DIR__ . '/params.php';
 $routes = require __DIR__ . '/routes.php';
 
 $config = [
@@ -23,13 +22,7 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
-        ],
-        'mailer' => [
-            'class' => \yii\symfonymailer\Mailer::class,
-            'viewPath' => '@app/mail',
-            // send all mails to a file by default.
-            'useFileTransport' => true,
+            'class' => 'app\components\JsonErrorHandler',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -46,7 +39,6 @@ $config = [
             'rules' => $routes,
         ],
     ],
-    'params' => $params,
 ];
 
 if (YII_ENV_DEV) {

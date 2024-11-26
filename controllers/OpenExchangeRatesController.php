@@ -1,14 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace app\controllers;
 
 use app\controllers\actions\GetLatestAction;
-use yii\filters\VerbFilter;
 use yii\base\Controller;
+use yii\filters\VerbFilter;
 
-class RatesController extends Controller
+final class OpenExchangeRatesController extends Controller
 {
     public const string GET_LATEST = 'get-latest';
+    // Add more constants here
 
     /**
      * {@inheritdoc}
@@ -20,6 +23,7 @@ class RatesController extends Controller
                 'class' => VerbFilter::class,
                 'actions' => [
                     self::GET_LATEST => ['get'],
+                    // Add more actions here
                 ],
             ],
         ];
@@ -32,6 +36,7 @@ class RatesController extends Controller
     {
         return [
             self::GET_LATEST => GetLatestAction::class,
+            // Add more actions here
         ];
     }
 }

@@ -1,0 +1,38 @@
+# Floww OXR Api
+
+## Description
+This api is a simple implementation of the Open Exchange Rates API.
+It provides a single endpoint to get latest the exchange rate of a given currency.
+
+## Requirements
+- Docker
+- Docker Compose
+
+## Setup
+To set up the project, follow these steps (or use the provided Makefile):
+
+1. Copy the `.env-example` file to `.env`:
+    ```sh
+    cp .env-example .env
+    ```
+
+2. Start the Docker containers:
+    ```sh
+    docker-compose up -d
+    ```
+
+3. Install the PHP dependencies using Composer:
+    ```sh
+    docker-compose exec php composer install
+    ```
+
+
+
+## Usage
+Access the application in your web browser at `http://localhost:8000`.
+
+
+## API All Endpoints
+- GET /api/exchange-rate/{currency}
+    - Get the exchange rate of a given currency.
+    - Example: api/oxr/latest/get

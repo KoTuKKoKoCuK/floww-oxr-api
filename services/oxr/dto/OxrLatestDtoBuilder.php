@@ -1,16 +1,14 @@
 <?php
 
-namespace app\services\DTO\builders;
+declare(strict_types=1);
 
-use app\services\DTO\OxrLatestDto;
-use app\services\DTO\OxrRatesDto;
+namespace app\services\oxr\dto;
 
 final readonly class OxrLatestDtoBuilder
 {
     public function __construct(
         private string $data
-    )
-    {
+    ) {
     }
 
     public function build(): OxrLatestDto

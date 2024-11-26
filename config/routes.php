@@ -1,5 +1,7 @@
 <?php
 
 return [
-    'api/oxr/rates/get' => 'rates/get-latest',
+    'api/oxr/latest/get' => 'open-exchange-rates/get-latest', // OpenExchangeRatesController::GET_LATEST
+
+    // ...
 ];
