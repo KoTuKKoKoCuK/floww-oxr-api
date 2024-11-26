@@ -27,7 +27,6 @@ final readonly class OxrService
                 'headers' => $this->headers(),
             ]);
 
-            $response->getBody()->getContents();
         } catch (GuzzleException $exception) {
             throw new OxrServiceException(
                 'Failed to fetch latest exchange rates',

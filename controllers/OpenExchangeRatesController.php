@@ -6,7 +6,9 @@ namespace app\controllers;
 
 use app\controllers\actions\GetLatestAction;
 use yii\base\Controller;
+use yii\filters\ContentNegotiator;
 use yii\filters\VerbFilter;
+use yii\web\Response;
 
 final class OpenExchangeRatesController extends Controller
 {
@@ -19,6 +21,12 @@ final class OpenExchangeRatesController extends Controller
     public function behaviors(): array
     {
         return [
+            'content' => [
+                'class' => ContentNegotiator::class,
+                'formats' => [
+                    'application/json' => Response::FORMAT_JSON,
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::class,
                 'actions' => [
