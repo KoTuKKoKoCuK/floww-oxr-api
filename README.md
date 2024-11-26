@@ -10,7 +10,8 @@ It provides a single endpoint to get latest the exchange rate.
 - PHP 8.3+
 
 ## Setup
-To set up the project, follow these steps (or use the provided Makefile):
+To set up the project, follow these steps (or use the provided Makefile)
+Don't forget to add your App id in dotenv file:
 
 1. Copy the `.env-example` file to `.env`:
     ```sh
