@@ -33,6 +33,6 @@ Access the application in your web browser at `http://localhost:8000`.
 
 
 ## API All Endpoints
-- GET /api/exchange-rate/{currency}
+- GET api/oxr/latest/get
     - Get the exchange rate of a given currency.
     - Example: api/oxr/latest/get
