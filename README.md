@@ -7,6 +7,7 @@ It provides a single endpoint to get latest the exchange rate.
 ## Requirements
 - Docker
 - Docker Compose
+- PHP 8.3+
 
 ## Setup
 To set up the project, follow these steps (or use the provided Makefile):
@@ -29,10 +30,11 @@ To set up the project, follow these steps (or use the provided Makefile):
 
 
 ## Usage
-Access the application in your web browser at `http://localhost:8000`.
+Access the application at
+`http://localhost:8000`.
 
 
 ## API All Endpoints
 - GET api/oxr/latest/get
-    - Get the exchange rate of a given currency.
+    - Get the exchange rate.
     - Example: api/oxr/latest/get
