@@ -2,7 +2,7 @@
 
 ## Description
 This api is a simple implementation of the Open Exchange Rates API.
-It provides a single endpoint to get latest the exchange rate of a given currency.
+It provides a single endpoint to get latest the exchange rate.
 
 ## Requirements
 - Docker
