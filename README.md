@@ -1,4 +1,4 @@
-# Floww OXR Api
+# Flowwow OXR Api
 
 ## Description
 This api is a simple implementation of the Open Exchange Rates API.
@@ -31,8 +31,7 @@ Don't forget to add your App id in dotenv file:
 
 
 ## Usage
-Access the application at
-`http://localhost:8000`.
+Access the application at `http://localhost:8000`.
 
 
 ## API All Endpoints
